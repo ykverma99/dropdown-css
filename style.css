@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  background-color: aqua;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+a, button{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dropdown{
+  height: 12vh;
+ 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.products, .project{
+  position: relative;
+}
+.projects ul, .products ul{
+  position: absolute;
+  background-color: blueviolet;
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translatey(10px);
+  transition: all 0.4s ease;
+}
+.projects a, .projects a{
+  text-decoration: none;
+  color: black;
+}
+.projects li, .products li{
+  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projects li:hover, .products li:hover{
+  background-color: crimson;
+}
+.dropdown button{
+  background: none;
+  border: none;
+  color: red;
+  font-size: 15px;
+  cursor: pointer;
+}
+.dropdown button:hover{
+  color: coral;
+}
+.projects button:hover + ul, .products button:focus + ul{
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
+}
